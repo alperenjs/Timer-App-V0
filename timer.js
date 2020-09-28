@@ -80,8 +80,12 @@ function displayEndTime(timeStamp) {
   }${minutes}`;
 }
 function startTimer() {
+  let type = this.dataset.type;
   cup.classList.remove("cupFlow");
+  cup.style.background = "url('" + type + ".png" + "')";
+
   //   console.log(this.id);
+
   const seconds = parseInt(this.dataset.time);
   setTimeout(() => {
     timer(seconds);
