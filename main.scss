@@ -1,0 +1,365 @@
+$font1: "Indie Flower", cursive;
+$font2: "Architects Daughter", cursive;
+
+@import "time";
+* {
+  font-family: $font2;
+}
+
+#openLeft {
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  top: 0;
+  background-color: white;
+  color: black;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+}
+#openRight {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  top: 0;
+  background-color: white;
+  color: black;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.myContainer {
+  height: 100vh;
+  background-color: orange;
+}
+
+.sidepanel {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+  top: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.7s;
+  padding-top: 80px;
+}
+
+.todo-list {
+  padding-bottom: 80px;
+}
+
+.sidepanelLeft {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 140px;
+}
+
+.borderAnimation {
+  animation: border 1s ease-in-out;
+}
+
+@keyframes border {
+  0% {
+    border-bottom-right-radius: 30px;
+  }
+  100% {
+    border-bottom-right-radius: 140px;
+  }
+}
+
+.borderAnimation2 {
+  animation: borderright 1s ease-in-out;
+}
+
+@keyframes borderright {
+  0% {
+    border-bottom-left-radius: 30px;
+  }
+  100% {
+    border-bottom-left-radius: 140px;
+  }
+}
+
+.sidepanelRight {
+  right: 0 !important;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 140px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 36px;
+  color: black;
+}
+.closebtn2 {
+  left: 0 !important;
+}
+
+.openbtn {
+  font-family: $font1;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 0 !important;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  width: 50px !important;
+  span {
+    font-size: 15px;
+    writing-mode: tb-rl;
+    transform: rotateZ(180deg);
+    font-size: 20px;
+  }
+}
+.openbtn:focus {
+  border: none;
+  outline: none;
+}
+
+/////// middle
+
+///LEFT
+
+.todo-input {
+  padding-top: 15px;
+  padding-left: 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  outline: none;
+}
+.todo-button {
+  padding-bottom: 15px;
+  background: transparent;
+  border: none;
+  margin-left: 130px;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  width: 100%;
+  list-style: none;
+  padding-left: 5px;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+  padding-left: 5px;
+}
+
+.todo {
+  border-bottom: 1px solid lightgray;
+  margin: 3px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+.todo li {
+  font-family: $font2;
+  font-size: 17px !important;
+  font-weight: 500;
+  flex: 1;
+  padding-bottom: 10px;
+  align-items: center;
+  padding-top: 10px;
+  font-size: 15px;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+.fall {
+  opacity: 0;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  opacity: 0.4;
+  padding: 0 6px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+.select:hover {
+  opacity: 1;
+}
+
+select {
+  background-color: papayawhip;
+  color: orange;
+  opacity: 0.7;
+  width: 100%;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.leftHeader {
+  font-family: $font1;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  margin-top: 30px;
+}
+
+.select::after {
+  content: "\25bc";
+  position: absolute;
+  background: rgba(255, 166, 0, 0.37);
+  top: 0;
+  right: 5px;
+  padding: 8px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  transform: rotateZ(90deg);
+}
+
+.todo:hover .delete-btn,
+.todo:hover .complete-btn {
+  display: block;
+}
+
+.delete-btn,
+.complete-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.delete-btn:focus,
+.complete-btn:focus {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+.delete-btn {
+  color: orange;
+}
+.complete-btn {
+  color: green;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(0, 0, 0, 0.411);
+  opacity: 1; /* Firefox */
+  padding-left: 85px;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: red;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: red;
+}
+
+textarea {
+  border: none;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+}
+textarea:focus {
+  outline: none;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+}
+
+//right section notes
+
+form .todo-input2 {
+  width: 100%;
+}
+form .todo-button2 {
+  margin-left: 130px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.todo-list2 {
+  padding-bottom: 80px;
+  text-decoration: none;
+  list-style: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .sidepanel {
+    width: 0;
+  }
+}
+
+//child color change left
+$chartColors: #30a5db, #f76540, #fa56ec, #ffcb05, #52d69d, #b67baa;
+@for $i from 1 through length($chartColors) {
+  $chartColors: append($chartColors, darken(nth($chartColors, $i), 25));
+}
+$chartColorsLength: length($chartColors);
+
+.color {
+  @for $i from 1 through $chartColorsLength {
+    &:nth-of-type(#{$chartColorsLength}n + #{$i}) {
+      color: nth($chartColors, $i);
+    }
+  }
+}
+
+//child color change right
+$chartColors: #fa56ec, #17c48a, #ffcb05, #62cd9f, #1ca6cf;
+@for $i from 1 through length($chartColors) {
+  $chartColors: append($chartColors, darken(nth($chartColors, $i), 25));
+}
+$chartColorsLength: length($chartColors);
+
+.color2 {
+  @for $i from 1 through $chartColorsLength {
+    &:nth-of-type(#{$chartColorsLength}n + #{$i}) {
+      color: nth($chartColors, $i);
+    }
+  }
+}

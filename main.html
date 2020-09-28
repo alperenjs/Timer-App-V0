@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+
+
+    <title>To Do</title>
+</head>
+
+<body>
+
+    <div class="myContainer">
+        <div id="mySidepanel" class="sidepanel sidepanelLeft ">
+            <span class="leftHeader">YAPILACAKLAR</span>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <form>
+
+                <div class="select">
+                    <select name="todos" class="filter-todo">
+                        <option value="all">Hepsi</option>
+                        <option value="completed">Tamamlanmış</option>
+                        <option value="uncompleted">Bekleyen</option>
+                    </select>
+
+                </div>
+                <input type="text" class="todo-input" placeholder="Sırada ne var?">
+                <button class="todo-button" type="submit">
+                    <i class="fas fa-plus"></i> </button>
+
+
+            </form>
+            <div class="todo-container">
+                <ul class="todo-list"></ul>
+            </div>
+
+        </div>
+
+        <div id="mySidepanel2" class="sidepanel sidepanelRight">
+            <span class="leftHeader">NOTLAR</span>
+            <a href="javascript:void(0)" class="closebtn closebtn2" onclick="closeNav2()">×</a>
+            <form>
+
+                <textarea class="todo-input2">              </textarea>
+
+                <button class="todo-button2" type="submit">
+                    <i class="fas fa-plus"></i> </button>
+
+            </form>
+            <div class="todo-container2">
+                <ul class="todo-list2"></ul>
+            </div>
+        </div>
+        <!--sideBars-->
+
+
+        <div class="main container">
+            <div class="time">
+                <button id="testid" data-time="5" class="timerButton"> 5 Secs</button>
+                <button id="secondid" data-time="10" class="timerButton"> Study 10</button>
+                <button data-time="900" class="timerButton"> Study 15</button>
+                <button data-time="1200" class="timerButton"> Study 20</button>
+
+                <form class="myForm" name="customForm" id="custom">
+                    <input type="text" name="hours" placeholder="saat">
+                    <input type="text" name="minutes" placeholder="dakika">
+                    <button type="submit">Başlat</button> </form>
+
+
+
+            </div>
+
+            <div class="coffee-wrapper">
+                <div id="cup" class="cup">
+                    <span class="buble"></span>
+                </div>
+                <div class="box">
+                    <span class="buble"></span>
+                    <span class="buble"></span>
+                </div>
+                <section></section>
+            </div>
+            <div class="display">
+                <h1 class="displayTimeLeft"></h1>
+                <p class="displayEndTime"></p>
+                <br>
+                <p class="displayEndTime"></p>
+            </div>
+        </div>
+
+
+        <button id="openLeft" class="openbtn" onclick="openNav()"> <span>Yapılacaklar </span></button>
+        <button id="openRight" class="openbtn" onclick="openNav2()"> <span>Notlar </span></button>
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <script src="timer.js"></script>
+    <script src="todo.js"></script>
+    <script src="buble.js"></script>
+</body>
+
+</html>
