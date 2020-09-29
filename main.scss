@@ -292,6 +292,7 @@ select {
 .select::after {
   content: "\25bc";
   position: absolute;
+  background: rgba(255, 166, 0, 0.37);
   top: 0;
   right: 5px;
   padding: 8px;

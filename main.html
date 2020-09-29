@@ -18,7 +18,7 @@
 
 <body>
 
-    <div class="myContainer">
+    <div class="myContainer darkMain">
         <div id="mySidepanel" class="sidepanel sidepanelLeft ">
             <span class="leftHeader">YAPILACAKLAR</span>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -51,12 +51,14 @@
 
                 <textarea class="todo-input2">              </textarea>
 
-                <button class="todo-button2" type="submit">
+                <button class="todo-button todo-button2" type="submit">
                     <i class="fas fa-plus"></i> </button>
 
             </form>
             <div class="todo-container2">
                 <ul class="todo-list2"></ul>
+                <button onclick="darkMode()" id="darkMode"> Dark Mode</button>
+
             </div>
         </div>
 
@@ -102,7 +104,7 @@
             </div>
 
             <div class="coffee-wrapper">
-                <div id="cup" class="cup">
+                <div id="cup" class="cup darkCup">
                     <span class="buble"></span>
                 </div>
                 <div class="box">
@@ -122,10 +124,10 @@
         </div>
 
 
-        <button id="openLeft" class="openbtn" onclick="openNav()"> <span>Yapılacaklar </span></button>
-        <button id="openRight" class="openbtn" onclick="openNav2()"> <span>Notlar </span></button>
-        <button id="openTop" class="openbtn kahvelerButton" onclick="openNav3()"> <span>Kahveler </span></button>
-
+        <button id="openLeft" class="openbtn darkBtn" onclick="openNav()"> <span>Yapılacaklar </span></button>
+        <button id="openRight" class="openbtn darkBtn" onclick="openNav2()"> <span>Notlar </span></button>
+        <button id="openTop" class="openbtn  kahvelerButton darkBtn" onclick="openNav3()"> <span id="darkSpan">Kahveler
+            </span></button>
 
 
 

@@ -120,3 +120,54 @@ buttons.forEach((button) => button.addEventListener("click", startTimer));
 //     cup.style.animationDuration = total + "s";
 //   }, 500);
 // });
+
+//DARK MODE
+var darkMain = document.querySelectorAll(".darkMain");
+var darkBtn = document.querySelectorAll(".darkBtn");
+var sidePanel = document.querySelectorAll(".sidepanel");
+var timerBtn = document.querySelectorAll(".timerButton");
+var closebtn = document.querySelectorAll(".closebtn");
+var plusbtn = document.querySelectorAll(".todo-button");
+var todolist = document.querySelectorAll(".todo");
+var todo = document.querySelectorAll(".todo-input");
+var darkCup = document.getElementById("cup");
+var darkSpan = document.getElementById("darkSpan");
+
+function darkMode() {
+  for (var i = 0; i < darkMain.length; i++) {
+    darkMain[i].style.background = "black";
+    darkMain[i].style.color = "white";
+  }
+  for (var i = 0; i < darkMain.length; i++) {
+    darkMain[i].style.background = "black";
+    darkMain[i].style.color = "white";
+  }
+  for (var i = 0; i < plusbtn.length; i++) {
+    plusbtn[i].style.color = "white";
+  }
+  for (var i = 0; i < todo.length; i++) {
+    todo[i].style.background = "transparent";
+    todo[i].style.color = "white";
+  }
+  for (var i = 0; i < timerBtn.length; i++) {
+    timerBtn[i].style.color = "white";
+    timerBtn[i].style.border = "2px solid white";
+  }
+  for (var i = 0; i < closebtn.length; i++) {
+    closebtn[i].style.color = "white";
+  }
+
+  for (var i = 0; i < darkBtn.length; i++) {
+    darkBtn[i].style.background = "black";
+    darkBtn[i].style.color = "white";
+    darkBtn[i].style.border = "1px solid white";
+  }
+
+  for (var i = 0; i < sidePanel.length; i++) {
+    sidePanel[i].style.background = "black";
+    sidePanel[i].style.border = "1px solid lightgray";
+  }
+
+  darkCup.style.border = "6px solid white";
+  darkSpan.style.color = "white";
+}

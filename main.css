@@ -29,7 +29,7 @@
           transform: translate(-50%, -50%);
   width: 150px;
   height: 130px;
-  border: 6px solid black;
+  border: 6px solid whitesmoke;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-repeat: repeat-x;
@@ -50,7 +50,7 @@
   position: fixed;
   width: 35px;
   height: 45px;
-  border: 6px solid black;
+  border: 6px solid whitesmoke;
   right: -38px;
   top: 30px;
   border-radius: 25px;
@@ -90,7 +90,7 @@
   left: 50%;
   -webkit-transform: translate(-50%, -61%);
           transform: translate(-50%, -61%);
-  background: black;
+  background: whitesmoke;
   width: 180px;
   height: 6px;
   border-radius: 15px;
@@ -220,6 +220,13 @@ section span {
   100% {
     background-position: 2500px 0px;
   }
+}
+
+#darkMode {
+  margin-left: 130px;
+  border: none;
+  background: black;
+  color: whitesmoke;
 }
 
 * {
@@ -557,6 +564,7 @@ select {
 .select::after {
   content: "\25bc";
   position: absolute;
+  background: rgba(255, 166, 0, 0.37);
   top: 0;
   right: 5px;
   padding: 8px;
