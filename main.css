@@ -1,3 +1,11 @@
+.displayTimeLeft {
+  font-size: 45px;
+}
+
+.displayEndTime {
+  font-size: 4vw;
+}
+
 .main {
   height: 100vh;
 }
@@ -24,9 +32,7 @@
   border: 6px solid black;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  background: url(water.png);
   background-repeat: repeat-x;
-  background-position: 0px 80px;
 }
 
 .cupFlow {
@@ -34,6 +40,9 @@
           animation: animate linear;
   -webkit-animation-duration: 30s;
           animation-duration: 30s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  background-repeat: repeat-x !important;
 }
 
 .cup:before {
@@ -148,6 +157,71 @@ section span {
   top: unset !important;
 }
 
+.buttonsFlex {
+  padding-top: 70px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.timerButton {
+  background: none;
+  border: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50px;
+  height: 30px;
+  border: 3px solid black;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0px -10px;
+  -webkit-animation: buton 60s linear infinite;
+          animation: buton 60s linear infinite;
+  background-repeat: repeat-x;
+}
+
+.timerButton:focus {
+  outline: none;
+}
+
+.nescafe {
+  background-image: url(/nescafe.png);
+}
+
+.machiato {
+  background-image: url(/machiato.png);
+}
+
+.espresso {
+  background-image: url(/espresso.png);
+}
+
+.milk {
+  background-image: url(/water.png);
+}
+
+@-webkit-keyframes buton {
+  0% {
+    background-position: 0 0px;
+  }
+  100% {
+    background-position: 2500px 0px;
+  }
+}
+
+@keyframes buton {
+  0% {
+    background-position: 0 0px;
+  }
+  100% {
+    background-position: 2500px 0px;
+  }
+}
+
 * {
   font-family: "Architects Daughter", cursive;
 }
@@ -181,20 +255,66 @@ section span {
 
 .myContainer {
   height: 100vh;
-  background-color: orange;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f78ca0), color-stop(19%, #f9748f), color-stop(60%, #fd868c), to(#fe9a8b));
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
 }
 
 .sidepanel {
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   height: 100vh;
   top: 0;
-  background-color: white;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   overflow-x: hidden;
   -webkit-transition: 0.7s;
   transition: 0.7s;
   padding-top: 80px;
+}
+
+.kahvelerButton {
+  z-index: 0;
+}
+
+#mySidepanel3 {
+  width: 100vw;
+  margin-top: -50px;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  border-bottom-right-radius: 130px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 0px !important;
+}
+
+#mySidepanel3 .buttonsFlex {
+  padding-top: 0;
+  top: 50px;
+  left: calc(50vw - 120px);
+  position: absolute;
+}
+
+#openTop {
+  position: absolute;
+  top: 0;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  text-align: center;
+  left: 48%;
+}
+
+#openTop span {
+  color: black;
+  padding: 0 10px;
+  text-align: center;
+  -webkit-writing-mode: unset;
+      -ms-writing-mode: unset;
+          writing-mode: unset;
 }
 
 .todo-list {
@@ -285,14 +405,13 @@ section span {
 }
 
 .openbtn {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   font-family: "Indie Flower", cursive;
   letter-spacing: 1px;
   font-weight: 600;
   padding: 0 !important;
   font-size: 24px;
   cursor: pointer;
-  background-color: transparent;
-  color: white;
   padding: 10px 15px;
   border: none;
   width: 50px !important;
@@ -314,6 +433,7 @@ section span {
 }
 
 .todo-input {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   padding-top: 15px;
   padding-left: 10px;
   width: 100%;
@@ -417,8 +537,8 @@ select {
 }
 
 select {
-  background-color: papayawhip;
-  color: orange;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  color: black;
   opacity: 0.7;
   width: 100%;
   cursor: pointer;
@@ -437,7 +557,6 @@ select {
 .select::after {
   content: "\25bc";
   position: absolute;
-  background: rgba(255, 166, 0, 0.37);
   top: 0;
   right: 5px;
   padding: 8px;
@@ -524,6 +643,7 @@ select {
 }
 
 textarea {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   border: none;
   border-bottom: 1px solid gray;
   border-top: 1px solid gray;

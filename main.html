@@ -59,20 +59,43 @@
                 <ul class="todo-list2"></ul>
             </div>
         </div>
+
+        <div id="mySidepanel3" class="sidepanel sidepanelRight">
+            <!-- <span class=" leftHeader">KAHVELER</span> -->
+            <a href="javascript:void(0)" class="closebtn closebtn3" onclick="closeNav3()">×</a>
+            <div class="buttonsFlex">
+                <button id="testid" data-type="machiato" data-time="1500" class="timerButton machiato"> 25 </button>
+                <button id="secondid" data-type="milk" data-time="300" class="timerButton milk">
+                    5</button>
+
+                <button data-time="900" data-type="milk" class="timerButton milk"> 15 </button>
+                <button id="secondid" data-type="espresso" data-time="3600" class="timerButton espresso">
+                    60</button>
+                <button data-time="1800" data-type="nescafe" class="timerButton nescafe"> 30 </button>
+
+
+            </div>
+            <!-- <form class="myForm" name="customForm" id="custom">
+                <input type="text" name="hours" placeholder="saat">
+                <input type="text" name="minutes" placeholder="dakika">
+                <button type="submit">Başlat</button> </form> -->
+
+        </div>
         <!--sideBars-->
 
 
         <div class="main container">
             <div class="time">
-                <button id="testid" data-type="nescafe" data-time="5" class="timerButton"> Nescafe </button>
-                <button id="secondid" data-type="espresso" data-time="10" class="timerButton"> Espresso</button>
-                <button data-time="900" data-type="machiato" class="timerButton"> Machiato </button>
-                <button data-time="1200" data-type="milk" class="timerButton"> Milk </button>
+                <!-- <div class="buttonsFlex">
+                    <button id="testid" data-type="nescafe" data-time="5" class="timerButton nescafe"> Nescafe </button>
+                    <button id="secondid" data-type="espresso" data-time="10" class="timerButton espresso">
+                        Espresso</button>
+                    <button data-time="900" data-type="machiato" class="timerButton machiato"> Machiato </button>
+                    <button data-time="1200" data-type="milk" class="timerButton milk"> Milk </button>
 
-                <form class="myForm" name="customForm" id="custom">
-                    <input type="text" name="hours" placeholder="saat">
-                    <input type="text" name="minutes" placeholder="dakika">
-                    <button type="submit">Başlat</button> </form>
+
+                </div> -->
+
 
 
 
@@ -90,7 +113,9 @@
             </div>
             <div class="display">
                 <h1 class="displayTimeLeft"></h1>
-                <p class="displayEndTime"></p>
+                <p class="displayEndTime">
+                    Başlamak için en uygun kahveyi seç!
+                </p>
                 <br>
                 <p class="displayEndTime"></p>
             </div>
@@ -99,6 +124,7 @@
 
         <button id="openLeft" class="openbtn" onclick="openNav()"> <span>Yapılacaklar </span></button>
         <button id="openRight" class="openbtn" onclick="openNav2()"> <span>Notlar </span></button>
+        <button id="openTop" class="openbtn kahvelerButton" onclick="openNav3()"> <span>Kahveler </span></button>
 
 
 

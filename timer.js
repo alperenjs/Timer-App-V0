@@ -18,6 +18,13 @@ function closeNav2() {
   document.getElementById("mySidepanel2").classList.remove("borderAnimation2");
 }
 
+function openNav3() {
+  document.getElementById("mySidepanel3").style.marginTop = "20px";
+}
+function closeNav3() {
+  document.getElementById("mySidepanel3").style.marginTop = "-50px";
+}
+
 //timer
 const cup = document.getElementById("cup");
 let countdown;
@@ -39,7 +46,6 @@ function timer(seconds) {
     //check if done
     if (secondsLeft < 0) {
       clearInterval(countdown);
-      console.log("bitmiştir");
       cup.classList.remove("cupFlow");
       return;
     }
@@ -75,7 +81,7 @@ function displayEndTime(timeStamp) {
   const end = new Date(timeStamp);
   const hour = end.getHours();
   const minutes = end.getMinutes();
-  endTime.textContent = `Tahmini varış saati ${hour > 12 ? hour - 12 : hour}:${
+  endTime.textContent = `Kahve bitme saati ${hour > 12 ? hour - 12 : hour}:${
     minutes < 10 ? "0 " : " "
   }${minutes}`;
 }
@@ -94,19 +100,23 @@ function startTimer() {
   }, 500);
 }
 
+cup.addEventListener("animationend", function () {
+  cup.style.background = "none";
+});
+
 buttons.forEach((button) => button.addEventListener("click", startTimer));
 
-document.customForm.addEventListener("submit", function (e) {
-  cup.classList.remove("cupFlow");
-  e.preventDefault();
-  const mins = this.minutes.value;
-  const hours = this.hours.value;
-  setTimeout(() => {
-    timer(hours * 3600 + mins * 60);
-    let total = hours * 3600 + mins * 60;
-    this.reset();
+// document.customForm.addEventListener("submit", function (e) {
+//   cup.classList.remove("cupFlow");
+//   e.preventDefault();
+//   const mins = this.minutes.value;
+//   const hours = this.hours.value;
+//   setTimeout(() => {
+//     timer(hours * 3600 + mins * 60);
+//     let total = hours * 3600 + mins * 60;
+//     this.reset();
 
-    cup.classList.add("cupFlow");
-    cup.style.animationDuration = total + "s";
-  }, 500);
-});
+//     cup.classList.add("cupFlow");
+//     cup.style.animationDuration = total + "s";
+//   }, 500);
+// });
