@@ -22,10 +22,9 @@
   
 ## Features
 
-- Pomodoro suitable timer choices on top nav, with animated coffee cups > coffee ends when the time ends.
-- Left Nav > todo-list with local storage, good for students and not sharing information except local.
--Right Nav > Multi-line note taking advantage.
-
+&#x268A; Pomodoro suitable timer choices on top nav, with animated coffee cups > coffee ends when the time ends.<br/>
+&#x268A; Right Nav > Multi-line note taking advantage.<br/>
+&#x268A; Left Nav > todo-list with local storage, good for students and not sharing information except local.<br/>
 
 
 ### Built With
