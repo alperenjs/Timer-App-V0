@@ -13,12 +13,12 @@
 .main .time {
   margin: 0 auto;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   text-align: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .cup {
@@ -26,7 +26,7 @@
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 150px;
   height: 130px;
   border: 6px solid whitesmoke;
@@ -37,11 +37,11 @@
 
 .cupFlow {
   -webkit-animation: animate linear;
-          animation: animate linear;
+  animation: animate linear;
   -webkit-animation-duration: 30s;
-          animation-duration: 30s;
+  animation-duration: 30s;
   -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  animation-iteration-count: 1;
   background-repeat: repeat-x !important;
 }
 
@@ -89,7 +89,7 @@
   top: 57%;
   left: 50%;
   -webkit-transform: translate(-50%, -61%);
-          transform: translate(-50%, -61%);
+  transform: translate(-50%, -61%);
   background: whitesmoke;
   width: 180px;
   height: 6px;
@@ -110,20 +110,20 @@ section span {
   border-radius: 50%;
   pointer-events: none;
   -webkit-box-shadow: inset 0 0 10px #3d1010;
-          box-shadow: inset 0 0 10px #3d1010;
+  box-shadow: inset 0 0 10px #3d1010;
   -webkit-animation: animation 4s linear infinite;
-          animation: animation 4s linear infinite;
+  animation: animation 4s linear infinite;
 }
 
 @-webkit-keyframes animation {
   0% {
     -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    transform: translateY(0%);
     opacity: 1;
   }
   100% {
     -webkit-transform: translateY(-1300%);
-            transform: translateY(-1300%);
+    transform: translateY(-1300%);
     opacity: 0;
   }
 }
@@ -131,12 +131,12 @@ section span {
 @keyframes animation {
   0% {
     -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    transform: translateY(0%);
     opacity: 1;
   }
   100% {
     -webkit-transform: translateY(-1300%);
-            transform: translateY(-1300%);
+    transform: translateY(-1300%);
     opacity: 0;
   }
 }
@@ -160,8 +160,8 @@ section span {
 .buttonsFlex {
   padding-top: 70px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .timerButton {
@@ -170,7 +170,7 @@ section span {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 50px;
   height: 30px;
   border: 3px solid black;
@@ -180,7 +180,7 @@ section span {
   background-size: cover;
   background-position: 0px -10px;
   -webkit-animation: buton 60s linear infinite;
-          animation: buton 60s linear infinite;
+  animation: buton 60s linear infinite;
   background-repeat: repeat-x;
 }
 
@@ -189,19 +189,19 @@ section span {
 }
 
 .nescafe {
-  background-image: url(/nescafe.png);
+  background-image: url(nescafe.png);
 }
 
 .machiato {
-  background-image: url(/machiato.png);
+  background-image: url(machiato.png);
 }
 
 .espresso {
-  background-image: url(/espresso.png);
+  background-image: url(espresso.png);
 }
 
 .milk {
-  background-image: url(/water.png);
+  background-image: url(water.png);
 }
 
 @-webkit-keyframes buton {
@@ -262,8 +262,22 @@ section span {
 
 .myContainer {
   height: 100vh;
-  background-image: -webkit-gradient(linear, left top, right top, from(#f78ca0), color-stop(19%, #f9748f), color-stop(60%, #fd868c), to(#fe9a8b));
-  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#f78ca0),
+    color-stop(19%, #f9748f),
+    color-stop(60%, #fd868c),
+    to(#fe9a8b)
+  );
+  background-image: linear-gradient(
+    to right,
+    #f78ca0 0%,
+    #f9748f 19%,
+    #fd868c 60%,
+    #fe9a8b 100%
+  );
 }
 
 .sidepanel {
@@ -291,7 +305,7 @@ section span {
   left: 50%;
   border-bottom-right-radius: 130px;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   height: 0px !important;
 }
 
@@ -320,8 +334,8 @@ section span {
   padding: 0 10px;
   text-align: center;
   -webkit-writing-mode: unset;
-      -ms-writing-mode: unset;
-          writing-mode: unset;
+  -ms-writing-mode: unset;
+  writing-mode: unset;
 }
 
 .todo-list {
@@ -335,7 +349,7 @@ section span {
 
 .borderAnimation {
   -webkit-animation: border 1s ease-in-out;
-          animation: border 1s ease-in-out;
+  animation: border 1s ease-in-out;
 }
 
 @-webkit-keyframes border {
@@ -358,7 +372,7 @@ section span {
 
 .borderAnimation2 {
   -webkit-animation: borderright 1s ease-in-out;
-          animation: borderright 1s ease-in-out;
+  animation: borderright 1s ease-in-out;
 }
 
 @-webkit-keyframes borderright {
@@ -427,10 +441,10 @@ section span {
 .openbtn span {
   font-size: 15px;
   -webkit-writing-mode: tb-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: tb-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: tb-rl;
   -webkit-transform: rotateZ(180deg);
-          transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
   font-size: 20px;
 }
 
@@ -461,11 +475,11 @@ section span {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .todo-list {
@@ -488,11 +502,11 @@ section span {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   opacity: 1;
@@ -503,12 +517,12 @@ section span {
   font-size: 17px !important;
   font-weight: 500;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding-bottom: 10px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-top: 10px;
   font-size: 15px;
 }
@@ -575,7 +589,7 @@ select {
 
 .select:hover::after {
   -webkit-transform: rotateZ(90deg);
-          transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
 }
 
 .todo:hover .delete-btn,
