@@ -237,6 +237,10 @@ section span {
   margin-bottom: 20px;
 }
 
+.body {
+  height: 100vh;
+}
+
 * {
   font-family: "Architects Daughter", cursive;
 }
