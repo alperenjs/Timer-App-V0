@@ -1,4 +1,5 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
+&nbsp; [Live Demo](https://alperenkarate.github.io/StudyingApp/main.html)
 
 <!-- PROJECT LOGO -->
 <br />
