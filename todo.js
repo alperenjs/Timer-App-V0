@@ -45,7 +45,7 @@ function addTodo(event) {
 
 function deleteCheck(e) {
   const item = e.target;
-  console.log(item);
+  console.log($(item.parentElement).index())
   //DELETE
   if (item.classList[0] === "delete-btn") {
     const todo = item.parentElement;
@@ -121,6 +121,7 @@ function getTodos() {
   } else {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
+  console.log(todos)
   todos.forEach(function (todo) {
     //New todo Div
     const todoDiv = document.createElement("div");
