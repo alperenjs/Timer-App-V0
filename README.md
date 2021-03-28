@@ -1,5 +1,5 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
-&nbsp; [Live Demo](https://alperenkarate.github.io/StudyingApp/main.html)
+&nbsp; [Live Demo](https://alperenkarate.github.io/Timer-App-V0/)
 
 <!-- PROJECT LOGO -->
 <br />
